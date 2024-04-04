@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+            ;
+        }
+        a, a:hover{
+            text-decoration: none;
+            color: antiquewhite;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+        }
+
+        .header{
+            width: 100%;
+            height: 100vh;
+            background-color: brown;
+        }
+        .navbar{
+            color: antiquewhite;
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(black,brown,white);;
+            width: 100%;
+            height: 12vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items:center ;
+
+        }
+        .logo{
+            margin-left: 40px;
+            width: 35%;
+            font-weight: 600;
+            text-decoration: solid;
+            word-spacing: 8px;
+            padding-top: 20px;
+        }
+        a{
+            font-size: 30px;
+        }
+        .menu{
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            align-items: center;
+            display: inline-block;
+        }
+        .menu a{
+            font-size: 19px;
+            color: antiquewhite;
+            letter-spacing: 2px;
+            padding: 10px;
+            border-radius:5px ;
+            text-transform: capitalize;
+            transition: all 0.5s;
+            opacity: 0.6;
+            display: flex;
+        }
+        .menu ul li{
+            margin-right: 30px;
+        }
+        .menu ul li a{
+            font-size: 19px;
+            letter-spacing: 2px;
+            padding: 10px;
+            border-radius:5px ;
+            text-transform: capitalize;
+            transition: all 0.5s;
+            opacity: 0.6;
+        }
+        .menu ul li a.active{
+            opacity: 1;
+        }
+        .menu ul li a:hover{
+            opacity: 1;
+        }
+        .hero{
+            width: 100%;
+        }
+        .hero .row{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 50px;
+            margin: auto;
+        }
+        .left-sec{
+            width: 30%;
+            margin-top: 90px;
+            margin-left: 50px;
+        }
+        .left-sec h2{
+            font-size: 55px;
+            color: antiquewhite;
+            text-transform: capitalize;
+        }
+        .left-sec h2 span{
+            color: black;
+            text-shadow: 1px 1px 2px black;
+            text-decoration: underline;
+            padding-right: 150px;
+        }
+        p{
+            margin: 20px;
+            color: #fff;
+            line-height: 28px;
+            padding: 20px 0 10px 0;
+        }
+        .discover_btn{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            outline: none;
+            border: 3px solid antiquewhite;
+            border-radius:60px ;
+            cursor:pointer ;
+            margin-top: 20px;
+            padding:0 20px 0 20px;
+            box-shadow: 5px 7px 20px black;
+
+        }
+        .discover_btn a{
+            color: antiquewhite;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-right: 15px;
+            text-transform: capitalize;
+
+        }
+        .discover_btn span{
+            color: #fff;
+            font-size: 45px;
+
+        }
+        .hero.information{
+            width: 100%;
+            display: flex;
+            margin-top: 100px;
+
+        }
+        .hero.information.production{
+            margin-right: 50px;
+            line-height: 3px;
+
+        }
+        .hero.information.production h2{
+            font-size: 20px;
+            letter-spacing: 1px
+        }
+        .hero.information.production p{
+            padding-right: 0;
+            letter-spacing: 1px;
+        }
+        div img{
+            width: 500px;
+            height: 500px;
+            border: 2px solid brown;
+            border-radius: 13px;
+            box-shadow: 4px 7px 7px 0 black;
+            cursor: pointer;
+            margin: 10px;
+            transition: 400ms;
+        }
+        div img:hover{
+            filter: grayscale(1);
+            transform: scale(1.03); 
+        }
+    </style>
+</head>
+<body>
+    <section class="header" id="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">CAROBAAR SYSTUMM</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="start.html" class="active">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="row">
+                <div class="left-sec">
+                    <div class="content">
+                        <h2><span>CAROBAAR</span><br>SYSTUMM</h2>
+                        <p>Whether you are a die-hard car fan or not, we can all admit that cars are incredible. The Cars we drive say a lot about Us.</p>
+                    </div>
+                    <button class="discover_btn">
+                        <a href="#">want to make a Good purchase???</a>
+                    </button>
+                </div>
+                <div class="right-sec">
+                    <div class="my-car">
+                        <img src="C:\Users\DELL\Pictures\back.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

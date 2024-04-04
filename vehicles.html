@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            height: 12vh;
+            background: linear-gradient(black, brown, white);
+            color: antiquewhite;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-align: center;
+            width: 31%;
+            font-size: larger;
+            word-spacing: 8px;
+            padding-top: 20px;
+        }
+
+        .menu {
+            display: flex;
+            width: 25%;
+            justify-content: space-between;
+            align-items: center;
+            display: inline-block;
+        }
+
+        .menu a {
+            font-size: 19px;
+            color: antiquewhite;
+            letter-spacing: 2px;
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: capitalize;
+            transition: all 0.5s;
+            opacity: 0.6;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .menu a.active {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right top, brown, black);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        p.me {
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+            align-items: center;
+            max-width: 600px;
+            margin-bottom: 40px;
+            margin-left: 350px;
+            margin-right: 20px;
+        }
+
+        .col {
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            width: 100%;
+        }
+
+        .card-container {
+            margin-left: 5px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .card {
+            position: relative;
+            width: 230px;
+            height: 240px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card img {
+            width: 110%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card h5 {
+            color: #fff;
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .card:hover h5 {
+            opacity: 1;
+        }
+
+        h1 {
+            align-items: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2><b>CAROBAAR SYSTUMM</b></h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="project.html" class="active">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1>VEHICLES ONLINE AUCTIONING</h1>
+        <p class="me">Online Car auctions serve as a digital marketplace where indivisuals and buisnesses can trade
+            over the internet,
+        </p>
+        <div class="col">
+            <div class="card-container">
+                <a href="merc.html">
+                    <div class="card card1">
+                        <img src="C:\Users\DELL\Pictures\mercedes.webp">
+                        <div class="card-overlay">
+                            <h5>MERCEDES</h5>
+                            <span style="color: white;">
+                            <br>Starting BID
+                            <br>$50000
+                        </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="bmw.html">
+                    <div class="card card2">
+                        <img src="C:\Users\DELL\Pictures\3.jpeg">
+                        <div class="card-overlay">
+                            <h5>BMW</h5>
+                            <span style="color: white;">
+                                <br>Starting BID
+                                <br>$70000
+                            </span>
+                        </div>
+                </a>
+            </div>
+            <a href="lambo.html">
+                <div class="card card3">
+                    <img src="C:\Users\DELL\Pictures\6.jpg">
+                    <div class="card-overlay">
+                        <h5>LAMBORGHINI</h5>
+                        <span style="color: white;">
+                        <br>Starting BID
+                        <br> $100000
+                    </span>
+
+                    </div>
+            </a>
+        </div>
+        <a href="bugati.html">
+            <div class="card card4">
+                <img src="C:\Users\DELL\Pictures\bhugaati.webp">
+                <div class="card-overlay">
+                    <h5>BUGATTI</h5>
+                    <span style="color: white;">
+                    <br>Starting BID
+                    <br>$200000
+                </span>
+                </div>
+            </div>
+        </a>
+        <a href="audi.html">
+            <div class="card card4">
+                <img src="C:\Users\DELL\Pictures\audi-car--126.webp">
+                <div class="card-overlay">
+                    <h5>AUDI</h5>
+                    <span style="color: white;">
+                    <br>Starting BID
+                    <br>$40000
+                </span>
+                </div>
+            </div>
+        </a>
+        </div>
+        </div>
+        </div>
+        </div>
+    </header>
+</body>
+
+</html>
